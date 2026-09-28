@@ -36,7 +36,7 @@ flowchart TD
     end
     
     MemoryLayer -->|Official SDK retain/recall/reflect| Hindsight[Hindsight Vectorize API / Cloud]
-    LLMWrapper -->|Primary: gpt-oss-120b | Fallback: qwen3-32b| Groq[Groq API]
+    LLMWrapper -->|"Primary: gpt-oss-120b, Fallback: qwen3-32b"| Groq[Groq API]
 ```
 
 ---
