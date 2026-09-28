@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY:-gsk_demo_mock_key}
+      - PRIMARY_LLM_MODEL=${PRIMARY_LLM_MODEL:-openai/gpt-oss-120b}
+      - FALLBACK_LLM_MODEL=${FALLBACK_LLM_MODEL:-qwen/qwen3-32b}
+      - HINDSIGHT_BASE_URL=${HINDSIGHT_BASE_URL:-http://hindsight:8888}
+      - HINDSIGHT_API_KEY=${HINDSIGHT_API_KEY:-}
+      - HINDSIGHT_BANK_ID=incidentmind-bank
+    depends_on:
+      - hindsight
+
+  hindsight:
+    image: vectorize/hindsight:latest
+    ports:
+      - "8888:8888"
+    environment:
+      - HINDSIGHT_PORT=8888
+    restart: unless-stopped
