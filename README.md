@@ -113,31 +113,6 @@ Access the application at [http://localhost:8000](http://localhost:8000).
 
 ---
 
-## 🎬 60-Second Demo Script for Judges
-
-1. **Step 1: Seed History (0:05s)**
-   - Click the **"Seed History (60 Incidents)"** button in the header.
-   - Watch 60 realistic 6-month past incidents load into Hindsight memory bank.
-
-2. **Step 2: Analyze Outage Alert (0:15s)**
-   - Click the preset **"PGW: Pool Exhaustion"**.
-   - Click **"Recall Hindsight & Analyze Alert"**.
-   - Show how IncidentMind ranks PgBouncer pooling at **100% success rate** with attribution to engineer *Priya Sharma*.
-
-3. **Step 3: Before / After Comparison (0:30s)**
-   - Click **"Compare Memory OFF vs ON"**.
-   - Point out how generic LLM (Memory OFF) gives generic "Restart pod" advice, whereas IncidentMind (Memory ON) identifies the exact root cause and warns against raw connection slot increases.
-
-4. **Step 4: Self-Correcting Feedback (0:45s)**
-   - Click **"Fix Worked"** on recommendation #1.
-   - Inspect the **Hindsight Memory Inspector** right sidebar to see the live retained memory update and the **Learning Curve Chart** jumping to **92%+ success rate**.
-
-5. **Step 5: Proactive Deploy Safety Check (0:60s)**
-   - Click **"Proactive Deploy Risk"** in header and run Preset #1.
-   - Show the **HIGH Risk Alert (78%)** warning against increasing Postgres `max_connections` directly.
-
----
-
 ## 🧪 Running Tests
 
 ```bash

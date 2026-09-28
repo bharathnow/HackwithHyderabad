@@ -52,12 +52,3 @@ node node_modules/vite/bin/vite.js build
 Result: **Clean production build** (`dist/index.html`, `dist/assets/index-CEW860aF.css`, `dist/assets/index-11kUa2f_.js`).
 
 ---
-
-## 🎬 60-Second Hackathon Demo Flow
-
-1. Click **"Seed History (60 Incidents)"** in top header to retain synthetic dataset into Hindsight.
-2. Select **"PGW: Pool Exhaustion"** preset and click **"Recall Hindsight & Analyze Alert"**.
-3. Inspect ranked recommendations: PgBouncer connection pooling is ranked #1 with **100% success rate** and attributed to *Priya Sharma*.
-4. Click **"Compare Memory OFF vs ON"** to demonstrate how generic LLM gives generic "Restart pod" advice, while IncidentMind pinpoints the exact root cause.
-5. Click **"Fix Worked"** to see feedback retained to Hindsight and watch the **Learning Curve Chart** jump to **92%+ success rate**.
-6. Open **"Proactive Deploy Risk"** in header to analyze a mock database deployment change and receive a **HIGH Risk (78%)** warning based on past incident memories.
