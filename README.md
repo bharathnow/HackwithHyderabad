@@ -1,27 +1,47 @@
-# IncidentMind 🧠⚡
+<div align="center">
 
-**Self-Learning On-Call Incident Response Agent for Fintech Payment Gateways**
+# ⚡ IncidentMind
 
-IncidentMind is an AI agent built for fintech payment engineering teams (handling high-volume UPI and card gateway outages). Unlike standard RAG or static prompt systems, **IncidentMind remembers every past incident**—error signatures, root causes, attempted fixes, historical success rates, and engineer attributions. When a new outage alert fires, it recalls past evidence from **Hindsight (Vectorize)** memory and recommends the fix with the proven highest historical success rate.
+### **Self-Learning On-Call Incident Response Agent for Fintech Payment Gateways**
+*🏆 Top 3 Winner — Hack with Hyderabad (24-Hour Competitive Hackathon)*
 
-Over time, as engineers submit feedback ("Fix worked" / "Fix failed"), IncidentMind retains the outcomes, allowing its memory bank to self-correct: remedies that cause regressions are downgraded, while effective remedies are promoted.
+[![Hackathon Winner](https://img.shields.io/badge/🏆_Award-Top_3_Winner_(HackWithHyderabad)-FFD700?style=for-the-badge)](https://github.com/bharathnow/HackwithHyderabad)
+[![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/Frontend-React_18-61DAFB?style=flat&logo=react&logoColor=black)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Styling-Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Groq](https://img.shields.io/badge/LLM-Groq_Inference-F05032?style=flat)](https://groq.com/)
+[![Hindsight](https://img.shields.io/badge/Memory-Hindsight_Vectorize-7928CA?style=flat)](https://vectorize.io/)
 
----
+[Overview](#-overview) • [Key Features](#-key-features) • [Architecture](#-architecture) • [Hindsight Memory](#-how-hindsight-memory-is-used) • [Quick Start](#-quick-start-local-setup) • [Docker](#-running-with-docker)
 
-## 🌟 Key Features
-
-1. **Alert Intake & Triage**: Paste raw error logs or select quick presets (`payment-gateway`, `upi-switch`, `ledger-service`, `auth-service`).
-2. **Hindsight TEMPR 4-Way Recall & Agent Reasoning**: Recalls matching historical incidents and ranks recommendations strictly by past success rate %.
-3. **Self-Correcting Feedback Loop**: "Fix worked" and "Fix failed" buttons retain outcome updates to Hindsight so memory self-corrects over time.
-4. **Before/After Side-by-Side Toggle**: Compare generic LLM response (Memory OFF) vs IncidentMind response (Memory ON) side-by-side.
-5. **Memory Inspector Panel**: Real-time right sidebar inspecting Hindsight retained memories, recalled evidence snippets, and `reflect()` synthesis.
-6. **Learning Curve Chart**: Visualizes first-suggestion success rate growth over time (from 45% baseline up to 92%+).
-7. **Proactive Deployment Risk Warning**: Evaluates proposed code/config changes against past incident memories to warn before outages happen.
-8. **Synthetic History Generator**: One-click "Seed History" populates 60+ realistic 6-month past incidents, including edge cases (conflicting advice, flaky fixes, repeated incidents).
+</div>
 
 ---
 
-## 🏗️ Architecture
+## 📌 Overview
+
+**IncidentMind** is an intelligent AI incident response agent engineered for fintech payment infrastructure teams handling mission-critical, high-volume UPI and card gateway outages.
+
+Unlike naive RAG systems or static LLM prompts, **IncidentMind maintains an evolving, self-correcting memory bank** of past incident signatures, root causes, remediation scripts, historical success rates, and engineer attributions. When an alert fires, it recalls proven precedents from **Hindsight (Vectorize)** vector memory and recommends remedies ranked strictly by past resolution efficacy.
+
+When engineers confirm or reject recommendations via "Fix Worked" or "Fix Failed", IncidentMind records the feedback to adjust confidence scores and downgrade regressive solutions.
+
+---
+
+## ✨ Key Features
+
+1. 🚨 **Alert Intake & Triage**: Paste raw error logs or select quick presets (`payment-gateway`, `upi-switch`, `ledger-service`, `auth-service`).
+2. 🧠 **Hindsight TEMPR 4-Way Recall & Agent Reasoning**: Recalls matching historical incidents and ranks recommendations strictly by past success rate %.
+3. 🔄 **Self-Correcting Feedback Loop**: "Fix worked" and "Fix failed" buttons retain outcome updates to Hindsight so memory self-corrects over time.
+4. ⚖️ **Before/After Side-by-Side Toggle**: Compare generic LLM response (Memory OFF) vs IncidentMind response (Memory ON) side-by-side.
+5. 🔍 **Memory Inspector Panel**: Real-time right sidebar inspecting Hindsight retained memories, recalled evidence snippets, and `reflect()` synthesis.
+6. 📈 **Learning Curve Chart**: Visualizes first-suggestion success rate growth over time (from 45% baseline up to 92%+).
+7. 🛡️ **Proactive Deployment Risk Warning**: Evaluates proposed code/config changes against past incident memories to warn before outages happen.
+8. ⚡ **Synthetic History Generator**: One-click "Seed History" populates 60+ realistic 6-month past incidents, including edge cases (conflicting advice, flaky fixes, repeated incidents).
+
+---
+
+## 🏛️ Architecture
 
 ```mermaid
 flowchart TD
@@ -120,3 +140,9 @@ Access the application at [http://localhost:8000](http://localhost:8000).
 $env:PYTHONPATH="backend"
 python -m pytest backend/tests/
 ```
+
+---
+
+<div align="center">
+  <sub>Developed by <a href="https://github.com/bharathnow">Mothukuri Bharath</a> • Top 3 at Hack with Hyderabad</sub>
+</div>
